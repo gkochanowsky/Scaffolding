@@ -45,7 +45,7 @@ namespace Microsoft.VisualStudio.Web.CodeGeneration
 }";
             var appSettingsPath = Path.Combine(AppBase, "appsettings.json"); 
             fs.FileExists(appSettingsPath);
-            Assert.Equal(expected, fs.ReadAllText(appSettingsPath), ignoreCase: false, ignoreLineEndingDifferences: true);
+            Assert.Equal(expected, fs.ReadAllText(appSettingsPath));
         }
 
         [Theory]
@@ -120,7 +120,7 @@ namespace Microsoft.VisualStudio.Web.CodeGeneration
             testObj.AddConnectionString("MyDbContext", "MyDbContext-NewGuid", useSqLite);
 
             //Assert
-            Assert.Equal(newContent, fs.ReadAllText(appSettingsPath), ignoreCase: false, ignoreLineEndingDifferences: true);
+            Assert.Equal(newContent, fs.ReadAllText(appSettingsPath));
         }
     }
 }

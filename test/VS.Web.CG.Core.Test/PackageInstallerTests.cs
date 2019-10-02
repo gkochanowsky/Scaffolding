@@ -1,6 +1,7 @@
-// Copyright (c) .NET Foundation. All rights reserved.
+﻿// Copyright (c) .NET Foundation. All rights reserved.
 // Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
+using System;
 using System.IO;
 using Microsoft.VisualStudio.Web.CodeGeneration.DotNet;
 using Microsoft.VisualStudio.Web.CodeGeneration.Test.Sources;
@@ -59,7 +60,7 @@ namespace Microsoft.VisualStudio.Web.CodeGeneration.Core.Test
 
             var actualJson = _mockFileSystem.ReadAllText(_projectJsonPath);
 
-            Assert.Equal(expectedJson, actualJson, ignoreCase: false, ignoreLineEndingDifferences: true);
+            Assert.Equal(expectedJson, actualJson);
         }
 
         [Fact]
@@ -91,7 +92,7 @@ namespace Microsoft.VisualStudio.Web.CodeGeneration.Core.Test
 
             var actualJson = _mockFileSystem.ReadAllText(_projectJsonPath);
 
-            Assert.Equal(expectedJson, actualJson, ignoreCase: false, ignoreLineEndingDifferences: true);
+            Assert.Equal(expectedJson, actualJson);
         }
     }
 }
