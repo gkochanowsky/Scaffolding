@@ -672,7 +672,7 @@ namespace Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Identity
 
             if (useSqlite)
             {
-                dependencies.Add("Microsoft.EntityFrameworkCore.Sqlite");
+                dependencies.Add("Microsoft.EntityFrameworkCore.Sqlite.Core");
             }
             else
             {
